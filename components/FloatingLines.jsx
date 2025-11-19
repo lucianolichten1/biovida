@@ -279,6 +279,7 @@ export default function FloatingLines({
   useEffect(() => {
     if (!containerRef.current) return;
 
+    let isMounted = true; // Flag to track if component is still mounted
     const scene = new Scene();
 
     const camera = new OrthographicCamera(-1, 1, 1, -1, 0, 1);
@@ -364,7 +365,10 @@ export default function FloatingLines({
     const clock = new Clock();
 
     const setSize = () => {
+      if (!isMounted) return; // Stop if component unmounted
       const el = containerRef.current;
+      if (!el || !renderer) return; // Guard against null ref or unmounted renderer
+      
       const width = el.clientWidth || 1;
       const height = el.clientHeight || 1;
 
@@ -377,7 +381,14 @@ export default function FloatingLines({
 
     setSize();
 
-    const ro = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(setSize) : null;
+    const ro = typeof ResizeObserver !== 'undefined' 
+      ? new ResizeObserver(() => {
+          // Wrapped in function to ensure null check on each resize
+          if (isMounted && containerRef.current && renderer) {
+            setSize();
+          }
+        }) 
+      : null;
 
     if (ro && containerRef.current) {
       ro.observe(containerRef.current);
@@ -412,6 +423,11 @@ export default function FloatingLines({
 
     let raf = 0;
     const renderLoop = () => {
+      // Stop if component unmounted
+      if (!isMounted || !containerRef.current || !renderer) {
+        return;
+      }
+      
       uniforms.iTime.value = clock.getElapsedTime();
 
       if (interactive) {
@@ -433,22 +449,25 @@ export default function FloatingLines({
     renderLoop();
 
     return () => {
+      isMounted = false; // Mark as unmounted first
       cancelAnimationFrame(raf);
       // eslint-disable-next-line react-hooks/exhaustive-deps
       if (ro && containerRef.current) {
         ro.disconnect();
       }
 
-      if (interactive) {
+      if (interactive && renderer) {
         renderer.domElement.removeEventListener('pointermove', handlePointerMove);
         renderer.domElement.removeEventListener('pointerleave', handlePointerLeave);
       }
 
-      geometry.dispose();
-      material.dispose();
-      renderer.dispose();
-      if (renderer.domElement.parentElement) {
-        renderer.domElement.parentElement.removeChild(renderer.domElement);
+      if (renderer) {
+        geometry.dispose();
+        material.dispose();
+        renderer.dispose();
+        if (renderer.domElement.parentElement) {
+          renderer.domElement.parentElement.removeChild(renderer.domElement);
+        }
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
