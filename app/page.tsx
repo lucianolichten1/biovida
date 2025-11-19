@@ -37,24 +37,36 @@ export default function Home() {
   const carouselIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    // Parallax effect for background image
+    // Parallax effect for background image - optimized with requestAnimationFrame and passive listener
+    let ticking = false;
+    
     const handleScroll = () => {
-      if (!parallaxBgRef.current || !heroSectionRef.current) return;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (!parallaxBgRef.current || !heroSectionRef.current) {
+            ticking = false;
+            return;
+          }
 
-      const scrolled = window.pageYOffset;
-      const heroTop = heroSectionRef.current.offsetTop;
-      const heroHeight = heroSectionRef.current.offsetHeight;
-      const scrollPosition = scrolled - heroTop;
+          const scrolled = window.pageYOffset;
+          const heroTop = heroSectionRef.current.offsetTop;
+          const heroHeight = heroSectionRef.current.offsetHeight;
+          const scrollPosition = scrolled - heroTop;
 
-      // Only apply parallax when scrolling within the hero section
-      if (scrollPosition >= 0 && scrollPosition <= heroHeight) {
-        // Move background at 30% of scroll speed for subtle effect
-        const translateY = scrollPosition * 0.3;
-        parallaxBgRef.current.style.transform = `translateY(${translateY}px) translateZ(0)`;
+          // Only apply parallax when scrolling within the hero section
+          if (scrollPosition >= 0 && scrollPosition <= heroHeight) {
+            // Move background at 30% of scroll speed for subtle effect
+            const translateY = scrollPosition * 0.3;
+            parallaxBgRef.current.style.transform = `translateY(${translateY}px) translateZ(0)`;
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Mark listener as passive for better scroll performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -90,7 +102,10 @@ export default function Home() {
         <div className="absolute inset-0">
           <div
             ref={parallaxBgRef}
-            className="parallax-bg absolute inset-0 bg-[url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center scale-105"
+            className="parallax-bg absolute inset-0 bg-cover bg-center scale-105"
+            style={{
+              backgroundImage: "url('/biovida-bg-1.webp')"
+            }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/80 to-emerald-900/70" />
         </div>
@@ -315,7 +330,10 @@ export default function Home() {
                   alt={`Proyecto BioVida ${(index % 6) + 1}`}
                   fill
                   className="object-cover"
-                  priority={index < 2}
+                  priority={index < 6}
+                  loading={index < 6 ? 'eager' : 'lazy'}
+                  quality={index < 6 ? 90 : 75}
+                  sizes="100vw"
                   style={{ margin: 0, padding: 0, display: 'block' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-950/40 via-slate-900/30 to-transparent" />
