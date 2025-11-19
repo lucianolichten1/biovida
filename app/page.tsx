@@ -22,7 +22,6 @@ import {
 } from 'react-feather';
 import FloatingLines from '@/components/FloatingLines';
 import LightRays from '@/components/LightRays';
-import Threads from '@/components/Threads';
 import CountUp from '@/components/CountUp';
 import { motion } from 'motion/react';
 
@@ -62,10 +61,28 @@ export default function Home() {
   // Continuous carousel animation is handled by CSS
   // No JavaScript interval needed for continuous movement
 
+  // Smooth scroll handler for navigation links
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      // Calculate offset to account for any spacing needed
+      const offset = 0; // Adjust if you have a fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <>
       {/* Hero Section */}
       <section
+        id="inicio"
         ref={heroSectionRef}
         className="relative h-screen flex items-center justify-center overflow-hidden"
       >
@@ -92,7 +109,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-[1.05]">
                 <span className="block drop-shadow">
                   <Image
-                    src="/biovida-logo.png"
+                    src="/biovida-logo.webp"
                     alt="BioVida"
                     width={200}
                     height={80}
@@ -114,6 +131,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4 items-center">
                 <a
                   href="#contacto"
+                  onClick={(e) => handleSmoothScroll(e, 'contacto')}
                   className="inline-flex items-center justify-center bg-solar text-slate-950 px-7 py-3.5 rounded-full font-semibold text-sm md:text-base shadow-soft hover:bg-solar-dark hover:translate-y-0.5 transition-all duration-200"
                 >
                   ¡Cotiza tu proyecto!
@@ -121,6 +139,7 @@ export default function Home() {
                 </a>
                 <a
                   href="#servicios"
+                  onClick={(e) => handleSmoothScroll(e, 'servicios')}
                   className="inline-flex items-center justify-center border border-white/30 text-slate-50 px-7 py-3.5 rounded-full font-medium text-sm md:text-base hover:bg-white/10 hover:border-white/60 transition-all duration-200"
                 >
                   Ver servicios
@@ -203,7 +222,7 @@ export default function Home() {
       </section>
 
       {/* ¿Qué hacemos? */}
-      <section className="py-20 bg-slate-950/95 border-t border-white/5 relative overflow-hidden">
+      <section id="quienes-somos" className="py-20 bg-slate-950/95 border-t border-white/5 relative overflow-hidden">
         {/* FloatingLines Background */}
         <div className="absolute inset-0 w-full h-full">
           {/* @ts-ignore - FloatingLines props are correctly typed in JSX but TS inference is incorrect */}
@@ -262,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* Photo Gallery Section - Full Height Infinite Carousel */}
-      <section className="h-screen relative overflow-hidden bg-slate-950">
+      <section id="proyectos" className="h-screen relative overflow-hidden bg-slate-950">
         {/* Motion Carousel */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -272,19 +291,19 @@ export default function Home() {
             transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
           >
             {[
-              '/biovida-5.jpg',
-              '/biovida-6.jpg',
-              '/biovida-7.jpg',
-              '/biovida-8.jpg',
-              '/biovida-background-last.jpg',
-              '/biovida-equipo.jpg',
+              '/biovida-5.webp',
+              '/biovida-6.webp',
+              '/biovida-7.webp',
+              '/biovida-8.webp',
+              '/biovida-background-last.webp',
+              '/biovida-equipo.webp',
               // Duplicate for seamless infinite loop
-              '/biovida-5.jpg',
-              '/biovida-6.jpg',
-              '/biovida-7.jpg',
-              '/biovida-8.jpg',
-              '/biovida-background-last.jpg',
-              '/biovida-equipo.jpg',
+              '/biovida-5.webp',
+              '/biovida-6.webp',
+              '/biovida-7.webp',
+              '/biovida-8.webp',
+              '/biovida-background-last.webp',
+              '/biovida-equipo.webp',
             ].map((src, index) => (
               <div
                 key={index}
@@ -434,22 +453,25 @@ export default function Home() {
       </section>
 
       {/* Cómo Funciona */}
-      <section className="py-20 bg-slate-950/95 border-t border-white/5 relative overflow-hidden">
+      <section id="como-funciona" className="py-20 bg-slate-950/95 border-t border-white/5 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
-              ¿Cómo Funciona?
+              ¿Cómo Funciona? <span className="text-emerald-400">(Interactivo)</span>
             </h2>
-            <p className="text-slate-300 text-sm md:text-base">
+            <p className="text-slate-300 text-sm md:text-base mb-2">
               Descubre el proceso paso a paso de cómo instalamos y operamos sistemas fotovoltaicos
               para transformar la energía solar en electricidad limpia y sostenible.
+            </p>
+            <p className="text-slate-400 text-xs md:text-sm italic">
+              👆 Haz clic en los números del diagrama para conocer cada paso del proceso
             </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-3xl overflow-visible shadow-soft border border-white/10 bg-gradient-to-b from-sky-200 via-sky-100 to-blue-50">
               <Image
-                src="/biovida-display.png"
+                src="/biovida-display.webp"
                 alt="Sistema fotovoltaico BioVida - Factory con paneles solares"
                 width={1200}
                 height={800}
@@ -791,7 +813,7 @@ export default function Home() {
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-white flex items-center justify-center p-8 shadow-lg">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/biologic-logo.png"
+                    src="/biologic-logo.webp"
                     alt="Biologic Logo"
                     fill
                     className="object-contain"
@@ -822,7 +844,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 bg-[url('/biovida-background-last.jpg')] bg-cover bg-center"
+            className="absolute inset-0 bg-[url('/biovida-background-last.webp')] bg-cover bg-center"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/85 to-emerald-900/80" />
         </div>
@@ -1024,46 +1046,41 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {/* Company Info */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-slate-50">BioVida</h3>
+              <div className="mb-2">
+                <Image
+                  src="/biovida-logo.webp"
+                  alt="BioVida"
+                  width={150}
+                  height={60}
+                  className="h-10 w-auto"
+                />
+              </div>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Energía solar para un futuro sostenible en Bolivia. Diseñamos, instalamos y mantenemos sistemas fotovoltaicos de alto rendimiento.
               </p>
             </div>
 
-            {/* Quick Links */}
+            {/* Quick Links & Services - Merged */}
             <div className="space-y-4">
-              <h4 className="text-sm font-semibold text-slate-50 uppercase tracking-wider">Enlaces Rápidos</h4>
+              <h4 className="text-sm font-semibold text-slate-50 uppercase tracking-wider">Enlaces y Servicios</h4>
               <nav className="flex flex-col space-y-3">
-                <a href="#inicio" className="text-slate-400 hover:text-solar transition-colors text-sm">
+                <a href="#inicio" onClick={(e) => handleSmoothScroll(e, 'inicio')} className="text-slate-400 hover:text-solar transition-colors text-sm">
                   Inicio
                 </a>
-                <a href="#servicios" className="text-slate-400 hover:text-solar transition-colors text-sm">
-                  Servicios
+                <a href="#quienes-somos" onClick={(e) => handleSmoothScroll(e, 'quienes-somos')} className="text-slate-400 hover:text-solar transition-colors text-sm">
+                  ¿Qué hacemos?
                 </a>
-                <a href="#proyectos" className="text-slate-400 hover:text-solar transition-colors text-sm">
+                <a href="#proyectos" onClick={(e) => handleSmoothScroll(e, 'proyectos')} className="text-slate-400 hover:text-solar transition-colors text-sm">
                   Proyectos
                 </a>
-                <a href="#contacto" className="text-slate-400 hover:text-solar transition-colors text-sm">
+                <a href="#servicios" onClick={(e) => handleSmoothScroll(e, 'servicios')} className="text-slate-400 hover:text-solar transition-colors text-sm">
+                  Servicios
+                </a>
+                <a href="#como-funciona" onClick={(e) => handleSmoothScroll(e, 'como-funciona')} className="text-slate-400 hover:text-solar transition-colors text-sm">
+                  ¿Cómo Funciona?
+                </a>
+                <a href="#contacto" onClick={(e) => handleSmoothScroll(e, 'contacto')} className="text-slate-400 hover:text-solar transition-colors text-sm">
                   Contacto
-                </a>
-              </nav>
-            </div>
-
-            {/* Services */}
-            <div className="space-y-4">
-              <h4 className="text-sm font-semibold text-slate-50 uppercase tracking-wider">Servicios</h4>
-              <nav className="flex flex-col space-y-3">
-                <a href="#servicios" className="text-slate-400 hover:text-solar transition-colors text-sm">
-                  Instalación Solar
-                </a>
-                <a href="#servicios" className="text-slate-400 hover:text-solar transition-colors text-sm">
-                  Mantenimiento
-                </a>
-                <a href="#servicios" className="text-slate-400 hover:text-solar transition-colors text-sm">
-                  Consultoría
-                </a>
-                <a href="#servicios" className="text-slate-400 hover:text-solar transition-colors text-sm">
-                  Financiamiento
                 </a>
               </nav>
             </div>
@@ -1096,21 +1113,30 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Creator Contact */}
+            <div className="space-y-4">
+              <h4 className="text-sm font-semibold text-slate-50 uppercase tracking-wider">¿Te gustó esta página?</h4>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Si te gustó el diseño y la funcionalidad de este sitio web, contáctanos para crear algo similar para tu proyecto.
+              </p>
+              <div className="flex flex-col space-y-2">
+                <a 
+                  href="mailto:lucianolichten@gmail.com?subject=Interesado en desarrollo web&body=Hola, me gustó el diseño de BioVida y me interesa trabajar contigo."
+                  className="inline-flex items-center text-slate-300 hover:text-solar transition-colors text-sm"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  contáctanos
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="mt-12 pt-8 border-t border-white/5 flex justify-center items-center">
             <p className="text-slate-500 text-sm">
               © {new Date().getFullYear()} BioVida. Todos los derechos reservados.
             </p>
-            <div className="flex items-center space-x-6">
-              <a href="#" className="text-slate-500 hover:text-solar transition-colors text-sm">
-                Política de Privacidad
-              </a>
-              <a href="#" className="text-slate-500 hover:text-solar transition-colors text-sm">
-                Términos de Servicio
-              </a>
-            </div>
           </div>
         </div>
       </footer>
