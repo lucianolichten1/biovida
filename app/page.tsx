@@ -1118,7 +1118,7 @@ export default function Home() {
             <div className="space-y-4">
               <h4 className="text-sm font-semibold text-slate-50 uppercase tracking-wider">¿Te gustó esta página?</h4>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Si te gustó el diseño y la funcionalidad de este sitio web, contáctanos para crear algo similar para tu proyecto.
+                Si te gustó el diseño y la funcionalidad de este sitio web, Contáctanos para crear algo similar para tu proyecto.
               </p>
               <div className="flex flex-col space-y-2">
                 <a 
@@ -1126,7 +1126,7 @@ export default function Home() {
                   className="inline-flex items-center text-slate-300 hover:text-solar transition-colors text-sm"
                 >
                   <Mail className="w-4 h-4 mr-2" />
-                  contáctanos
+                  Contáctanos
                 </a>
               </div>
             </div>
