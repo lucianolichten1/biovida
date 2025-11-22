@@ -107,28 +107,38 @@ export default function ServiciosSection() {
               </div>
             </div>
             <ul className="space-y-3 text-slate-200 text-sm">
-              <li className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Instalación de sistemas solares conectados a red (on-grid) y autónomos
-                  (off-grid).
+                  Instalación de sistemas solares conectados a red (On-Grid) con venta de energía a CRE. (Generación Distribuida).
                 </span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Diseño de sistemas de respaldo con baterías de litio y acumuladores de
-                  energía.
+                  Diseño de sistemas aislados (Off-Grid) con sistemas de respaldo con baterías de litio y acumuladores de energía.
                 </span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <span>
+                  Sistemas de bombeo solar.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <span>
+                  Sistemas híbridos.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
                   Estudios de factibilidad técnica y económica para proyectos solares.
                 </span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
                   Optimización de consumo energético y reducción de la factura eléctrica.
                 </span>
@@ -143,31 +153,47 @@ export default function ServiciosSection() {
                 <Cpu className="w-7 h-7 text-emerald-300" />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-slate-50">Servicios Electrónicos</h3>
+                <h3 className="text-2xl font-semibold text-slate-50">Servicios Eléctricos</h3>
                 <p className="text-xs uppercase tracking-[0.2em] text-slate-400 mt-1">
                   Operación & mantenimiento
                 </p>
               </div>
             </div>
             <ul className="space-y-3 text-slate-200 text-sm">
-              <li className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5" />
-                <span>Operación y mantenimiento de plantas solares fotovoltaicas.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5" />
-                <span>Pruebas de rendimiento para baterías y paneles solares.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Suministro de componentes eléctricos DC y equipos de sistemas solares.
+                  Instalación de sistemas solares conectados a red (On-Grid) con venta de energía a CRE. (Generación Distribuida).
                 </span>
               </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5" />
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Monitoreo remoto y diagnóstico de sistemas para maximizar la vida útil.
+                  Diseño de sistemas aislados (Off-Grid) con sistemas de respaldo con baterías de litio y acumuladores de energía.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <span>
+                  Sistemas de bombeo solar.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <span>
+                  Sistemas híbridos.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <span>
+                  Estudios de factibilidad técnica y económica para proyectos solares.
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <span>
+                  Optimización de consumo energético y reducción de la factura eléctrica.
                 </span>
               </li>
             </ul>

@@ -47,8 +47,7 @@ export default function ContactSection() {
             Contáctanos
           </h2>
           <p className="text-slate-300 text-sm md:text-base mb-6">
-            Escríbenos para recibir un estudio preliminar de tu consumo y una propuesta adaptada a
-            tu hogar, empresa o industria en Bolivia.
+          Contáctanos para obtener un análisis inicial y descubrir cuánto puedes <strong>ahorrar</strong> en tu hogar, negocio, planta o campo con energía solar.
           </p>
           {/* Instagram Link */}
           <div className="flex justify-center">

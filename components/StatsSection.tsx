@@ -42,7 +42,7 @@ export default function StatsSection() {
                   hoveredCard === 0 ? 'text-emerald-300' : ''
                 }`}
               >
-                +500 kW
+                +600 kW
               </h3>
               <p className="text-slate-300 text-sm mt-1">Potencia instalada</p>
               <div

@@ -86,7 +86,7 @@ export default function QuienesSomosSection() {
             En <span className="text-solar">BioVida</span> acompañamos a nuestros clientes en
             todo el ciclo de su proyecto solar: desde el primer estudio de factibilidad hasta la
             puesta en marcha y el mantenimiento a largo plazo. Integramos tecnología fotovoltaica
-            de última generación con ingeniería eléctrica especializada para garantizar
+            de última generación con ingeniería especializada para garantizar
             seguridad, ahorro y sostenibilidad.
           </p>
 

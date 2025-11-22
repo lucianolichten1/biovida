@@ -111,9 +111,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-base md:text-lg text-slate-200/80 mb-8 max-w-2xl">
-              Diseñamos, instalamos y mantenemos sistemas fotovoltaicos de alto rendimiento,
-              conectados a red y con respaldo de baterías, para hogares, empresas e industrias
-              en toda Bolivia.
+            Ofrecemos soluciones solares completas para viviendas, comercios, plantas productivas y campos. Realizamos el estudio técnico, el diseño del sistema, la provisión de equipos, la instalación y la puesta en marcha, garantizando un funcionamiento confiable, eficiente y con ahorro real en tus costos de energía.
             </p>
 
             <div className="flex flex-wrap gap-4 items-center">
@@ -163,7 +161,7 @@ export default function HeroSection() {
                     Potencia instalada
                   </p>
                   <p className="text-2xl font-bold">
-                    +<CountUp from={0} to={500} separator="," direction="up" duration={1} className="count-up-text" onStart={undefined} onEnd={undefined} /> kW
+                    +<CountUp from={0} to={600} separator="," direction="up" duration={1} className="count-up-text" onStart={undefined} onEnd={undefined} /> kW
                   </p>
                 </div>
                 <div className="p-3 rounded-2xl bg-slate-950/40 border border-white/5">
