@@ -87,7 +87,7 @@ export default function ServiciosSection() {
           </h2>
           <p className="text-slate-300 text-sm md:text-base">
             Integramos <span className="text-solar">energía renovable</span> y
-            <span className="text-emerald-300"> servicios electrónicos</span> para ofrecer
+            <span className="text-emerald-300"> servicios eléctricos</span> para ofrecer
             soluciones completas de sistemas fotovoltaicos en Bolivia.
           </p>
         </div>
@@ -146,7 +146,7 @@ export default function ServiciosSection() {
             </ul>
           </div>
 
-          {/* Servicios Eléctricos / Electrónicos */}
+          {/* Servicios Eléctricos */}
           <div className="bg-slate-900/80 border border-white/5 rounded-3xl p-8 shadow-soft hover:-translate-y-1 hover:border-emerald-400/60 transition-all duration-200">
             <div className="flex items-center mb-6">
               <div className="bg-emerald-500/15 p-3 rounded-2xl mr-4">
@@ -163,37 +163,37 @@ export default function ServiciosSection() {
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Instalación de sistemas solares conectados a red (On-Grid) con venta de energía a CRE. (Generación Distribuida).
+                  Gestión y aprobación de proyectos eléctricos.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Diseño de sistemas aislados (Off-Grid) con sistemas de respaldo con baterías de litio y acumuladores de energía.
+                  Construcción de líneas eléctricas de Media y Baja Tensión.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Sistemas de bombeo solar.
+                  Provisión de transformadores certificados.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Sistemas híbridos.
+                  Provisión de materiales eléctricos.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Estudios de factibilidad técnica y económica para proyectos solares.
+                  Mantenimiento de Transformadores.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                 <span>
-                  Optimización de consumo energético y reducción de la factura eléctrica.
+                  Proyectos eléctricos subterráneos.
                 </span>
               </li>
             </ul>
