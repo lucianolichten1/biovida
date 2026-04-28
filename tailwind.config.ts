@@ -22,7 +22,7 @@ const config: Config = {
   				DEFAULT: '#fbbf24',
   				dark: '#d97706'
   			},
-  			biovida: {
+  			enerlogic: {
   				DEFAULT: '#047857',
   				soft: '#ecfdf5',
   				dark: '#065f46'

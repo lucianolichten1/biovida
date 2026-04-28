@@ -97,10 +97,10 @@ export default function HeroSection() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-[1.05]">
               <span className="block drop-shadow">
                 <Image
-                  src="/biovida-logo.webp"
-                  alt="BioVida"
-                  width={200}
-                  height={80}
+                  src="/EnerLogic Horizontal Logo Color B.png"
+                  alt="EnerLogic"
+                  width={280}
+                  height={90}
                   className="h-12 md:h-16 lg:h-20 w-auto"
                   priority
                 />
@@ -153,7 +153,7 @@ export default function HeroSection() {
           <div className="hidden md:block">
             <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-soft animate-soft-float">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-solar-light mb-4">
-                Impacto BioVida
+                Impacto EnerLogic
               </p>
               <div className="grid grid-cols-2 gap-4 text-slate-100 text-sm">
                 <div className="p-3 rounded-2xl bg-slate-950/40 border border-white/5">

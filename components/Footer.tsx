@@ -31,10 +31,10 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="mb-2">
               <Image
-                src="/biovida-logo.webp"
-                alt="BioVida"
-                width={150}
-                height={60}
+                src="/EnerLogic Horizontal Logo Color B.png"
+                alt="EnerLogic"
+                width={200}
+                height={70}
                 className="h-10 w-auto"
               />
             </div>
@@ -90,8 +90,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-solar flex-shrink-0" />
-                <a href="mailto:ventas@biovida.com.bo" className="text-slate-400 hover:text-solar transition-colors">
-                  ventas@biovida.com.bo
+                <a href="mailto:ventas@enerlogic.com.bo" className="text-slate-400 hover:text-solar transition-colors">
+                  ventas@enerlogic.com.bo
                 </a>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col space-y-2">
               <a 
-                href="mailto:lucianolichten@gmail.com?subject=Interesado en desarrollo web&body=Hola, me gustó el diseño de BioVida y me interesa trabajar contigo."
+                href="mailto:lucianolichten@gmail.com?subject=Interesado en desarrollo web&body=Hola, me gustó el diseño de EnerLogic y me interesa trabajar contigo."
                 className="inline-flex items-center text-slate-300 hover:text-solar transition-colors text-sm"
               >
                 <Mail className="w-4 h-4 mr-2" />
@@ -118,7 +118,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/5 flex justify-center items-center">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} BioVida. Todos los derechos reservados.
+            © {new Date().getFullYear()} EnerLogic. Todos los derechos reservados.
           </p>
         </div>
       </div>

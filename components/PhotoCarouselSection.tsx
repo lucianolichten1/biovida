@@ -27,7 +27,7 @@ export default function PhotoCarouselSection() {
             >
               <Image
                 src={src}
-                alt={`Proyecto BioVida ${(index % 6) + 1}`}
+                alt={`Proyecto EnerLogic ${(index % 6) + 1}`}
                 fill
                 className="object-cover"
                 priority={index < 6}
@@ -46,7 +46,7 @@ export default function PhotoCarouselSection() {
       <div className="absolute inset-0 z-10 flex flex-col items-center px-6" style={{ paddingTop: '22%' }}>
         <div className="text-center max-w-4xl">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-50 drop-shadow-lg">
-            BioVida en Acción
+            EnerLogic en Acción
           </h2>
           <p className="text-lg md:text-xl text-slate-200 drop-shadow-md">
             Descubre nuestros proyectos de energía solar y conoce al equipo que hace posible la transición energética en Bolivia

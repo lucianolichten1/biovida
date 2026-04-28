@@ -83,7 +83,7 @@ export default function ServiciosSection() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
-            Servicios BioVida
+            Servicios EnerLogic
           </h2>
           <p className="text-slate-300 text-sm md:text-base">
             Integramos <span className="text-solar">energía renovable</span> y

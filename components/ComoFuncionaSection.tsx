@@ -27,7 +27,7 @@ export default function ComoFuncionaSection() {
           <div className="relative rounded-3xl overflow-visible shadow-soft border border-white/10 bg-gradient-to-b from-sky-200 via-sky-100 to-blue-50">
             <Image
               src="/biovida-display.webp"
-              alt="Sistema fotovoltaico BioVida - Factory con paneles solares"
+              alt="Sistema fotovoltaico EnerLogic - Factory con paneles solares"
               width={1200}
               height={800}
               className="w-full h-auto object-cover rounded-3xl"

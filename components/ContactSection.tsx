@@ -52,7 +52,7 @@ export default function ContactSection() {
           {/* Instagram Link */}
           <div className="flex justify-center">
             <a
-              href="https://www.instagram.com/biovidabo"
+              href="https://www.instagram.com/enerlogicbo"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center space-x-3 text-slate-300 hover:text-solar transition-colors duration-200 px-4 py-2 rounded-lg border border-white/20 hover:border-solar/50"
@@ -86,12 +86,12 @@ export default function ContactSection() {
               const email = formData.get('email');
               const phone = formData.get('phone');
               
-              const subject = encodeURIComponent('Consulta desde BioVida');
+              const subject = encodeURIComponent('Consulta desde EnerLogic');
               const body = encodeURIComponent(
                 `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${phone}\n\nMensaje:`
               );
               
-              window.location.href = `mailto:ventas@biovida.com.bo?subject=${subject}&body=${body}`;
+              window.location.href = `mailto:ventas@enerlogic.com.bo?subject=${subject}&body=${body}`;
             }}>
               <div>
                 <label htmlFor="name-email" className="block text-sm font-medium text-slate-200 mb-2">
@@ -169,7 +169,7 @@ export default function ContactSection() {
               const phone = formData.get('phone') as string;
               
               const text = encodeURIComponent(
-                `Hola, soy ${name}. Mi email es ${email} y mi número es ${phone}. Me gustaría recibir más información sobre BioVida.`
+                `Hola, soy ${name}. Mi email es ${email} y mi número es ${phone}. Me gustaría recibir más información sobre EnerLogic.`
               );
               
               window.open(`https://wa.me/59178111078?text=${text}`, '_blank');

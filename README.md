@@ -1,6 +1,6 @@
-# BioVida - Next.js Landing Page
+# EnerLogic - Next.js Landing Page
 
-A modern landing page for BioVida, built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern landing page for EnerLogic, built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ npm start
   - `page.tsx` - Main landing page component
   - `globals.css` - Global styles and Tailwind imports
 - `public/` - Static assets (images, etc.)
-  - `biovida-logo.png` - BioVida logo
+  - `EnerLogic Horizontal Logo Color B.png` - EnerLogic logo
 - `tailwind.config.ts` - Tailwind CSS configuration with custom colors
 - `package.json` - Dependencies and scripts
 
@@ -50,7 +50,7 @@ npm start
 
 The Tailwind config includes custom colors:
 - `solar` - Solar energy theme colors (light, DEFAULT, dark)
-- `biovida` - BioVida brand colors (DEFAULT, soft, dark)
+- `enerlogic` - EnerLogic brand colors (DEFAULT, soft, dark)
 
 Custom animations are defined in `app/globals.css`:
 - `fadeInUp` - Fade in with upward motion

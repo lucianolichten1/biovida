@@ -80,10 +80,10 @@ export default function QuienesSomosSection() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-50">
-            ¿Qué hacemos en BioVida?
+            ¿Qué hacemos en EnerLogic?
           </h2>
           <p className="text-slate-300 text-sm md:text-base mb-10 leading-relaxed">
-            En <span className="text-solar">BioVida</span> acompañamos a nuestros clientes en
+            En <span className="text-solar">EnerLogic</span> acompañamos a nuestros clientes en
             todo el ciclo de su proyecto solar: desde el primer estudio de factibilidad hasta la
             puesta en marcha y el mantenimiento a largo plazo. Integramos tecnología fotovoltaica
             de última generación con ingeniería especializada para garantizar
