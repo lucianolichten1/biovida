@@ -52,7 +52,7 @@ export default function ContactSection() {
           {/* Instagram Link */}
           <div className="flex justify-center">
             <a
-              href="https://www.instagram.com/enerlogicbo"
+              href="https://www.instagram.com/biovidabo"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center space-x-3 text-slate-300 hover:text-solar transition-colors duration-200 px-4 py-2 rounded-lg border border-white/20 hover:border-solar/50"
