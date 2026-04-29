@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="es">
       <body className="bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-slate-50">
         {children}
+        <Analytics />
       </body>
     </html>
   );
