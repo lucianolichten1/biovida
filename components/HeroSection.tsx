@@ -201,8 +201,8 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center">
         <div className="flex flex-col items-center text-slate-200/80 text-xs">
-          <span>Desliza para ver más</span>
-          <ChevronDown className="w-6 h-6 mt-1 animate-bounce" />
+          <span className="hidden md:inline">Desliza para ver más</span>
+          <ChevronDown className="w-6 h-6 mt-0 md:mt-1 animate-bounce" />
         </div>
       </div>
     </section>
